@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYET Portfolio</title>
+<style>
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f9f9f9; color: #333;}
+
+header {background: #fff; border-bottom: 1px solid #e0e0e0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding-bottom: 20px;}
+.header-top {display: flex; justify-content: space-between; padding: 15px 40px 5px; font-weight: 500; color: #555;}
+.header-center {text-align: center; margin: 50px 0 20px;}
+.header-center h1 { margin:5px 0; color:#000; font-size:2em; }
+.header-center p { margin:3px 0; font-weight:500; color:#555; }
+
+.header-nav {text-align:center; margin-top:40px;}
+.header-nav a {margin:0 25px; text-decoration:none; color:#000; font-weight:600; position:relative; padding-bottom:5px;}
+.header-nav a::after {content:''; position:absolute; left:0; bottom:0; width:0; height:2px; background:#007BFF; transition:0.3s;}
+.header-nav a:hover::after { width:100%; }
+section { padding:60px 20px; }
+
+#projects h2 {text-align:center; font-size:2.2em; margin-bottom:40px; color:#000;}
+.projects-container {display:flex; flex-wrap:wrap; justify-content:center; gap:25px;}
+.project-card {background:#fff; border-radius:12px; overflow:hidden; width:300px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;}
+.project-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.12); }
+.project-image { width:100%; height:200px; object-fit:cover; }
+
+.description-holder { padding:15px; }
+.description-holder strong { display:block; margin-bottom:10px; font-size:1.1em; color:#007BFF; }
+
+.article-button {display:block; margin:10px auto 20px; padding:10px 25px; border:none; background:#007BFF; color:#fff; border-radius:25px; font-weight:600; cursor:pointer; transition:0.3s;}
+.article-button:hover { background:#0056b3; }
+
+footer {background:#fff; padding:40px 20px; text-align:center; border-top:1px solid #e0e0e0; box-shadow:0 -2px 4px rgba(0,0,0,0.03);}
+footer h2 { margin-bottom:15px; color:#000; }
+footer a { margin:0 10px; color:#007BFF; text-decoration:none; font-weight:600; }
+footer a:hover { text-decoration:underline; }
+#reserved { margin-top:15px; font-size:0.9em; color:#555; }
+
+@media(max-width:768px){
+    .projects-container{flex-direction:column;align-items:center;}
+    .header-top{flex-direction:column;align-items:center;gap:5px;}
+}
+</style>
+</head>
+<body>
+
+<header id="about">
+    <div class="header-top">
+        <span>Welcome</span>
+        <span>My Portfolio</span>
+    </div>
+    <div class="header-center">
+        <h1>Clarice Arellano</h1>
+        <p>BSIT2</p>
+        <p>Cute ko</p>
+    </div>
+    <nav class="header-nav">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+
+        <article class="project-card">
+            <img src="images/lending.png" alt="Simple Lending System" class="project-image">
+            <div class="description-holder">
+                <strong>Simple Lending System</strong>
+                <p>A basic PHP program that calculates loan payments based on the loan amount and selected months. It shows the monthly payment, total interest, and total amount to pay using a 2% monthly interest rate.</p>
+            </div>
+            <button class="article-button" onclick="window.open('https://github.com/ayet09/Simple-Lending-System','_blank')">Visit Project</button>
+        </article>
+
+        <article class="project-card">
+            <img src="images/login.png" alt="Login System" class="project-image">
+            <div class="description-holder">
+                <strong>Login System</strong>
+                <p>A simple PHP system where users first sign up to create an account, then log in to see a personalized welcome message. After logging in, users can log out securely.</p>
+            </div>
+            <button class="article-button" onclick="window.open('https://github.com/ayet09/Login-System','_blank')">Visit Project</button>
+        </article>
+
+        <article class="project-card">
+            <img src="images/crud.png" alt="Students CRUD System" class="project-image">
+            <div class="description-holder">
+                <strong>Students CRUD System</strong>
+                <p>A PHP-based system that allows an admin to add, view, update, and delete student records. Each student has a unique ID, name, course, and year level.</p>
+            </div>
+            <button class="article-button" onclick="window.open('https://github.com/ayet09/Students-CRUD-System','_blank')">Visit Project</button>
+        </article>
+
+    </div>
+</section>
+</main>
+
+<footer id="contact">
+    <h2>Contacts</h2>
+    <p>Email: lovearellano38@gmail.com</p>
+    <p>Phone #: 09069669634</p>
+    <p>
+        Social Media: 
+        <a href="https://www.instagram.com/ayetttlove/">Instagram</a> | 
+        <a href="https://www.facebook.com/love.ayettt09">Facebook</a>
+    </p>
+    <div id="reserved">
+        <p>2026 Ayet. All rights reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>
